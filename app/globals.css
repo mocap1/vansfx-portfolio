@@ -46,3 +46,27 @@ body {
     transform: translate(0px, 0px) rotate(360deg);
   }
 }
+
+/* ---------- HERO AMBIENT GLOW ---------- */
+
+.hero-glow {
+  position: absolute;
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+
+  background: radial-gradient(
+    circle,
+    rgba(139, 92, 246, 0.18) 0%,
+    rgba(139, 92, 246, 0.08) 35%,
+    transparent 70%
+  );
+
+  filter: blur(90px);
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}

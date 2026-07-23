@@ -9,30 +9,81 @@ type Props = {
 
 export default function FloatingShape({
   className = "",
-  size = 140,
+  size = 180,
 }: Props) {
   return (
     <motion.div
-      animate={{
-        y: [-8, 8, -8],
-        rotate: [-4, 4, -4],
-      }}
-      transition={{
-        duration: 12,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
       className={`absolute ${className}`}
       style={{
         width: size,
         height: size,
       }}
+      animate={{
+        y: [-18, 18, -18],
+        x: [-8, 8, -8],
+        rotate: [-12, 12, -12],
+      }}
+      transition={{
+        duration: 18,
+        repeat: Infinity,
+        ease: "easeInOut",
+      }}
     >
-      <div className="relative h-full w-full">
-        <div className="absolute inset-0 rounded-xl border border-violet-500/20 rotate-12" />
+      <svg
+        viewBox="0 0 200 200"
+        className="h-full w-full"
+        fill="none"
+      >
+        {/* Outer diamond */}
+        <polygon
+          points="100,10 190,100 100,190 10,100"
+          stroke="rgb(139 92 246 / .18)"
+          strokeWidth="1.5"
+        />
 
-        <div className="absolute inset-4 rounded-xl border border-violet-500/20 -rotate-12" />
-      </div>
+        {/* Inner diamond */}
+        <polygon
+          points="100,40 160,100 100,160 40,100"
+          stroke="rgb(139 92 246 / .28)"
+          strokeWidth="1.2"
+        />
+
+        {/* Square */}
+        <rect
+          x="55"
+          y="55"
+          width="90"
+          height="90"
+          stroke="rgb(139 92 246 / .20)"
+          strokeWidth="1"
+          transform="rotate(45 100 100)"
+        />
+
+        {/* Cross lines */}
+        <line
+          x1="100"
+          y1="10"
+          x2="100"
+          y2="190"
+          stroke="rgb(139 92 246 / .10)"
+        />
+
+        <line
+          x1="10"
+          y1="100"
+          x2="190"
+          y2="100"
+          stroke="rgb(139 92 246 / .10)"
+        />
+
+        {/* Center glow */}
+        <circle
+          cx="100"
+          cy="100"
+          r="3"
+          fill="#8b5cf6"
+        />
+      </svg>
     </motion.div>
   );
 }

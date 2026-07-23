@@ -1,7 +1,13 @@
+import Navbar from "@/components/layout/Navbar";
+import Collaborations from "@/components/collaborations/Collaborations";
+
 export default function CollaborationsPage() {
   return (
-    <main>
-      <h1>Collaborations</h1>
-    </main>
+    <>
+      <Navbar />
+      <main className="pt-32">
+        <Collaborations />
+      </main>
+    </>
   );
 }

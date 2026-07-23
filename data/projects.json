@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Project One",
+    "category": "Gaming",
+    "type": "long",
+    "software": "Premiere Pro • After Effects",
+    "thumbnail": "/projects/thumbnails/project1.jpg",
+    "preview": "/projects/previews/project1.mp4",
+    "link": "https://youtube.com/",
+    "platform": "YouTube",
+    "featured": true
+  },
+  {
+    "id": 2,
+    "title": "Project Two",
+    "category": "Gaming",
+    "type": "long",
+    "software": "Premiere Pro",
+    "thumbnail": "/projects/thumbnails/project2.jpg",
+    "preview": "/projects/previews/project2.mp4",
+    "link": "https://youtube.com/",
+    "platform": "YouTube",
+    "featured": true
+  },
+  {
+    "id": 3,
+    "title": "Project Three",
+    "category": "Content",
+    "type": "short",
+    "software": "Premiere Pro",
+    "thumbnail": "/projects/thumbnails/project3.jpg",
+    "preview": "/projects/previews/project3.mp4",
+    "link": "https://instagram.com/",
+    "platform": "Instagram",
+    "featured": true
+  },
+  {
+    "id": 4,
+    "title": "Project Four",
+    "category": "Commercial",
+    "type": "short",
+    "software": "After Effects",
+    "thumbnail": "/projects/thumbnails/project4.jpg",
+    "preview": "/projects/previews/project4.mp4",
+    "link": "https://drive.google.com/",
+    "platform": "Drive",
+    "featured": true
+  }
+]

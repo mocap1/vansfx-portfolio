@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import BackgroundScene from "@/components/background/BackgroundScene";
+import Footer from "@/components/layout/Footer";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +15,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VansFX",
-  description: "Video Editor • Production Manager • Creative Portfolio",
+  title: "VansFX | Professional Video Editor",
+  description:
+    "Professional video editor specializing in long-form content, short-form videos, trailers, and motion graphics.",
 };
 
 export default function RootLayout({
@@ -27,8 +30,13 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-screen bg-[#09090B] text-white flex flex-col">
-        {children}
+      <body className="relative min-h-screen overflow-x-hidden bg-[#09090B] text-white">
+        <BackgroundScene />
+
+        <div className="relative z-10 flex min-h-screen flex-col">
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );
