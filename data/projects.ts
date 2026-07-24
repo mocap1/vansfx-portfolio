@@ -69,6 +69,19 @@ export const projects: Project[] = [
   // LONG-FORM — GAMING MONTAGES
   // =====================================================
 
+    {
+    id: 25,
+    title: "Tore Up | Tournament Grounds Montage",
+    category: "Gaming Montage",
+    type: "long",
+    orientation: "landscape",
+    software: "Adobe Premiere Pro",
+    youtubeId: "tIJUrP-f8bw",
+    link: "https://www.youtube.com/watch?v=tIJUrP-f8bw",
+    platform: "YouTube",
+    featured: true,
+  },
+
   {
     id: 4,
     title: "SFR Montage",
